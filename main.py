@@ -205,7 +205,7 @@ class GiftBuyer():
                             except Exception:
                                 pBrand = "paypal"
                             sID = source["id"]
-                            async with client.post(f"https://discord.com/api/v9/store/skus/{self.nitro_id}/purchase", json={"gift":True, "sku_subscription_plan_id": self.sku_id, "payment_source_id": sID, "payment_source_token": None, "expected_amount": self.nitro_price, "expected_currency": "usd", "purchase_token": "500fb34b-671a-4614-a72e-9d13becc2e95"}) as response:
+                            async with client.post(f"https://discord.com/api/v9/store/skus/{self.nitro_id}/purchase", json={"gift":True, "sku_subscription_plan_id": self.sku_id, "payment_source_id": sID, "payment_source_token": None, "expected_amount": self.nitro_price, "expected_currency": "usd", "purchase_token": "4d76a51c-e9d9-4ef8-ae24-1691e8881da6"}) as response:
                                 json = await response.json()
                                 if json.get("gift_code"):
                                     logging.info(f"[{green}+{reset}] [{magenta}{pBrand}{reset}] Purchased nitro [{magenta}{token[:22]}...{reset}]")
